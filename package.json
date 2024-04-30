@@ -20,19 +20,19 @@
     "@react-three/drei": "^9.17.1",
     "@react-three/fiber": "^8.2.0",
     "@react-three/postprocessing": "~2.6.2",
-    "three": "^0.142.0",
-    "three-stdlib": "^2.12.1",
     "next": "14.1.4",
     "next-pwa": "^5.6.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "three": "^0.142.0",
+    "three-stdlib": "^2.12.1"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
-    "@types/three": "^0.141.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/three": "^0.141.0",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
     "eslint-config-prettier": "^9.1.0",
