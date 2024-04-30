@@ -1372,6 +1372,15 @@
     screen-space-reflections "2.5.0"
     three-stdlib "^2.8.11"
 
+"@react-three/xr@^5.7.1":
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/@react-three/xr/-/xr-5.7.1.tgz#ebba10f08047691f1ee18aa4bfbc1106cfebf811"
+  integrity sha512-GaRUSA+lE8VJF/NrXq7QQByZ4UGHbQQ4rs3QCphZs9fVidK86hGrMOQ0kL79gZc5pa3V5uFGlOhNcUdsTYE3Bg==
+  dependencies:
+    "@types/webxr" "*"
+    three-stdlib "^2.21.1"
+    zustand "^3.7.1"
+
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.3.1.tgz#04bc0608f4aa4b2e4b1aebf284344d0f68fda283"
@@ -1555,7 +1564,7 @@
   resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.7.tgz#baccb07a970b91707df3a3e8ba6896c57ead2d11"
   integrity sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==
 
-"@types/webxr@*", "@types/webxr@^0.5.2":
+"@types/webxr@*", "@types/webxr@^0.5.15", "@types/webxr@^0.5.2":
   version "0.5.15"
   resolved "https://registry.yarnpkg.com/@types/webxr/-/webxr-0.5.15.tgz#21cd63e83a997c14ff91c7c537efabb787d1af09"
   integrity sha512-nC9116Gd4N+CqTxqo6gvCfhAMAzgRcfS8ZsciNodHq8uwW4JCVKwhagw8yN0XmC7mHrLnWqniJpoVEiR+72Drw==
@@ -4395,6 +4404,7 @@ streamsearch@^1.1.0:
   integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -4594,6 +4604,18 @@ three-stdlib@^2.12.1, three-stdlib@^2.29.9, three-stdlib@^2.8.11:
   version "2.29.9"
   resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.29.9.tgz#ee8fe2ce01f08817c15bb7f00c52b6558c981ff8"
   integrity sha512-O6HRkJXX5A3DGXdvMwi8XqYlTV1wXdhKhxWmTuDoXFN4aZj96GW7gKj8FQ4bWFV2L8SmXuYSpkvJoG/1GCc9Ug==
+  dependencies:
+    "@types/draco3d" "^1.4.0"
+    "@types/offscreencanvas" "^2019.6.4"
+    "@types/webxr" "^0.5.2"
+    draco3d "^1.4.1"
+    fflate "^0.6.9"
+    potpack "^1.0.1"
+
+three-stdlib@^2.21.1:
+  version "2.29.10"
+  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.29.10.tgz#4d32995b153b6d37d693d42f4646200f5f590e2e"
+  integrity sha512-zFPNF6oALvlyKmoKwxcfC8PyIS7z55DVgMs0CoKZGcTuFnKIW5nR50t/ozaoLaf9qt+Q7DfpfqsYLMbJeHzuaA==
   dependencies:
     "@types/draco3d" "^1.4.0"
     "@types/offscreencanvas" "^2019.6.4"
