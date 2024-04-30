@@ -2,6 +2,9 @@
   "name": "test-next",
   "version": "0.1.0",
   "private": true,
+  "resolutions": {
+    "postprocessing": "~6.28.7"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,12 +14,22 @@
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {
+    "3d-tiles-renderer": "^0.3.13",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@react-three/drei": "^9.17.1",
+    "@react-three/fiber": "^8.2.0",
+    "@react-three/postprocessing": "~2.6.2",
+    "three": "^0.142.0",
+    "three-stdlib": "^2.12.1",
     "next": "14.1.4",
     "next-pwa": "^5.6.0",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@types/three": "^0.141.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
