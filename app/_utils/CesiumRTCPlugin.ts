@@ -3,6 +3,7 @@ import { GLTF, GLTFLoaderPlugin, GLTFParser } from 'three-stdlib';
 export class CesiumRTCPlugin implements GLTFLoaderPlugin {
   readonly name = 'CESIUM_RTC';
 
+  // eslint-disable-next-line no-unused-vars
   constructor(private readonly parser: GLTFParser) {}
 
   afterRoot(result: GLTF): null {

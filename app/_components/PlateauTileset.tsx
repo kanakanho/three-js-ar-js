@@ -25,9 +25,6 @@ export const PlateauTileset: React.FC<PlateauTilesetProps> = ({ path, center = f
   const createTiles = useCallback(
     (path: string) => {
       const tiles = new TilesRenderer(
-        // 'https://assets.cms.plateau.reearth.io/assets/22/a919cc-1c92-4165-8adc-fcc534251b63/13100_tokyo23-ku_2022_3dtiles_1_1_op_bldg_13101_chiyoda-ku_lod2_no_texture/tileset.json',
-        // 'https://assets.cms.plateau.reearth.io/assets/c0/3a9d29-be09-408c-84c3-fbb201dbbefd/23100_nagoya-shi_2021_3dtiles_2_op_bldg_23102_higashi-ku_lod2_no_texture/tileset.json',
-        // 'https://assets.cms.plateau.reearth.io/assets/80/29d793-50d4-4124-a2a1-dc7100a6793e/23100_nagoya-shi_2021_3dtiles_2_op_bldg_23102_higashi-ku_lod2/tileset.json',
         `https://plateau.geospatial.jp/main/data/3d-tiles/${path}/tileset.json`,
       );
 
