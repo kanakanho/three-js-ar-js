@@ -8,7 +8,11 @@ export class CesiumRTCPlugin implements GLTFLoaderPlugin {
 
   afterRoot(result: GLTF): null {
     if (this.parser.json.extensions?.CESIUM_RTC?.center != null) {
-      const { center } = this.parser.json.extensions.CESIUM_RTC;
+      const center: [number, number, number] = this.parser.json.extensions.CESIUM_RTC.center as [
+        number,
+        number,
+        number,
+      ];
       result.scene.position.set(...center);
     }
     return null;
