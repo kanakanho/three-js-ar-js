@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   return (
     <>
       <XRButton mode='AR' />
-      <Canvas shadows>
+      <Canvas>
         <XR>
           <PerspectiveCamera makeDefault position={[0, 12, 0]} near={10} far={1e5} />
           <directionalLight
