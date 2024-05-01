@@ -1,6 +1,6 @@
 'use client';
 
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import { PerspectiveCamera } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { EffectComposer, SSAO } from '@react-three/postprocessing';
 import { XR, XRButton } from '@react-three/xr';
@@ -14,10 +14,7 @@ const Home: React.FC = () => {
       <XRButton mode='AR' />
       <Canvas shadows>
         <XR>
-          <fogExp2 attach='fog' color='white' density={0.0002} />
-          <PerspectiveCamera makeDefault position={[-1600, 450, -1400]} near={10} far={1e5} />
-          <OrbitControls target={[-1200, 0, -800]} />
-          <ambientLight intensity={0.5} />
+          <PerspectiveCamera makeDefault position={[0, 12, 0]} near={10} far={1e5} />
           <directionalLight
             position={[500, 1000, 1000]}
             intensity={1}
