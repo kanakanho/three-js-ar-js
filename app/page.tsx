@@ -3,7 +3,7 @@
 import { PerspectiveCamera } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { EffectComposer, SSAO } from '@react-three/postprocessing';
-import { XR, XRButton } from '@react-three/xr';
+import { XR, ARButton } from '@react-three/xr';
 import React from 'react';
 import { PlateauTileset } from './_components/PlateauTileset';
 import { PlateauTilesetTransform } from './_components/PlateauTilesetTransform';
@@ -11,7 +11,7 @@ import { PlateauTilesetTransform } from './_components/PlateauTilesetTransform';
 const Home: React.FC = () => {
   return (
     <>
-      <XRButton mode='AR' />
+      <ARButton />
       <Canvas>
         <XR>
           <PerspectiveCamera makeDefault position={[0, 12, 0]} near={10} far={1e5} />
