@@ -3,7 +3,7 @@
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { EffectComposer, SSAO } from '@react-three/postprocessing';
-import { XR, XRButton } from '@react-three/xr';
+import { XR, ARButton } from '@react-three/xr';
 import React from 'react';
 import { PlateauTileset } from './_components/PlateauTileset';
 import { PlateauTilesetTransform } from './_components/PlateauTilesetTransform';
@@ -11,8 +11,8 @@ import { PlateauTilesetTransform } from './_components/PlateauTilesetTransform';
 const Home: React.FC = () => {
   return (
     <>
-      <XRButton mode='AR' />
-      <Canvas shadows>
+      <ARButton />
+      <Canvas>
         <XR>
           <fogExp2 attach='fog' color='white' density={0.0002} />
           <PerspectiveCamera makeDefault position={[-1600, 450, -1400]} near={10} far={1e5} />
