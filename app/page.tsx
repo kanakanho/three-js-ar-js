@@ -10,7 +10,7 @@ import { PlateauTileset } from './_components/PlateauTileset';
 import { PlateauTilesetTransform } from './_components/PlateauTilesetTransform';
 
 const Home: React.FC = () => {
-  const [cameraPosition, setCameraPosition] = useState<Vector3>(new Vector3(1050, 12, -250));
+  const [cameraPosition, setCameraPosition] = useState<Vector3>(new Vector3(1050, 1200, -250));
 
   return (
     <>
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
             <orthographicCamera attach='shadow-camera' args={[-2500, 2500, 2500, -2500, 1, 5000]} />
           </directionalLight>
           <PlateauTilesetTransform setCameraPosition={setCameraPosition}>
-            <PlateauTileset path='bldg/23100_nagoya/23101_chikusa-ku/notexture' />
+            {/* <PlateauTileset path='bldg/23100_nagoya/23101_chikusa-ku/notexture' /> */}
             <PlateauTileset path='bldg/23100_nagoya/23102_higashi-ku/notexture' center />
           </PlateauTilesetTransform>
           <EffectComposer>
