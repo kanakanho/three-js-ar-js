@@ -17,16 +17,19 @@ export const PlateauTilesetTransform: React.FC<PlateauTilesetTransformProps> = (
     const rotation = new Quaternion();
     rotation.setFromUnitVectors(direction, up);
     setState({
-      offset: new Vector3(0, -center.length(), 0),
+      offset: new Vector3(-1040, -center.length() - 16, 240),
       rotation,
     });
   }, []);
 
   const context = useMemo(() => ({ setCenter }), [setCenter]);
 
+  const scale = 1;
+  const scales: Vector3 = new Vector3(scale, scale, scale);
+
   return (
     <PlateauTilesetTransformContext.Provider value={context}>
-      <group position={offset} quaternion={rotation}>
+      <group position={offset} scale={scales} quaternion={rotation}>
         {children}
       </group>
     </PlateauTilesetTransformContext.Provider>
