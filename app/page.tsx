@@ -5,6 +5,7 @@ import { EffectComposer, SSAO } from '@react-three/postprocessing';
 import { XR, ARButton } from '@react-three/xr';
 import React, { useState } from 'react';
 import { Vector3 } from 'three';
+import { InputCameraPosition } from './_components/InputCameraPosition';
 import { PlateauTileset } from './_components/PlateauTileset';
 import { PlateauTilesetTransform } from './_components/PlateauTilesetTransform';
 import { ThreeCamera } from './_components/ThreeCamera';
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
   return (
     <>
       <ARButton />
+      <InputCameraPosition cameraPosition={cameraPosition} setCameraPosition={setCameraPosition} />
       <Canvas>
         <XR>
           <fogExp2 attach='fog' color='white' density={0.0002} />

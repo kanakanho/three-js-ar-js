@@ -2,21 +2,11 @@ import { PerspectiveCamera } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import React, { useCallback, useEffect, useState } from 'react';
 import { Camera, Vector3 } from 'three';
+import { Keys } from '../_types/InputKeys';
 
 type ThreeCameraProps = {
   cameraPosition: Vector3;
   setCameraPosition: React.Dispatch<React.SetStateAction<Vector3>>;
-};
-
-type Keys = {
-  w: boolean;
-  a: boolean;
-  s: boolean;
-  d: boolean;
-  ArrowLeft: boolean;
-  ArrowRight: boolean;
-  ArrowUp: boolean;
-  ArrowDown: boolean;
 };
 
 export const ThreeCamera: React.FC<ThreeCameraProps> = ({ cameraPosition, setCameraPosition }) => {
@@ -86,10 +76,10 @@ export const ThreeCamera: React.FC<ThreeCameraProps> = ({ cameraPosition, setCam
         camera.rotateY(-rotateSpeed);
       }
       if (keys.ArrowUp) {
-        camera.rotateX(rotateSpeed/10);
+        camera.rotateX(rotateSpeed / 10);
       }
       if (keys.ArrowDown) {
-        camera.rotateX(-rotateSpeed/10);
+        camera.rotateX(-rotateSpeed / 10);
       }
     },
     [keys],
@@ -98,6 +88,8 @@ export const ThreeCamera: React.FC<ThreeCameraProps> = ({ cameraPosition, setCam
   useFrame(({ camera }) => {
     moveCamera(camera, 0.5, 0.1);
     setCameraPosition(camera.position);
+    console.log(camera.position);
+    console.log(cameraPosition);
   });
 
   return <PerspectiveCamera makeDefault position={cameraPosition} near={1} far={1000} />;
