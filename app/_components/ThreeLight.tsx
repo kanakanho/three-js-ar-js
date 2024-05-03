@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 type ThreeLightProps = {
@@ -9,14 +11,12 @@ export const ThreeLight: React.FC<ThreeLightProps> = ({ cameraPosition }) => {
     <>
       <ambientLight intensity={2} />
       <directionalLight
-        name='directionalLight'
         position={[cameraPosition.x, cameraPosition.y + 200, cameraPosition.z]}
         intensity={2}
         castShadow
         shadow-mapSize={[8192, 8192]}
       >
         <orthographicCamera attach='shadow-camera' args={[-2500, 2500, 2500, -2500, 1, 5000]} />
-        {/* constructor(left?: number, right?: number, top?: number, bottom?: number, near?: number, far?: number); */}
       </directionalLight>
     </>
   );

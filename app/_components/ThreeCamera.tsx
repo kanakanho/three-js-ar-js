@@ -1,3 +1,5 @@
+'use client';
+
 import { PerspectiveCamera } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import React, { useCallback, useEffect, useState } from 'react';

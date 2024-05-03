@@ -11,7 +11,7 @@ import { ThreeCamera } from './_components/ThreeCamera';
 import { ThreeLight } from './_components/ThreeLight';
 
 const Home: React.FC = () => {
-  const [cameraPosition, setCameraPosition] = useState<Vector3>(new Vector3(0, 0, -0));
+  const [cameraPosition, setCameraPosition] = useState<Vector3>(new Vector3(0, 0, 0));
 
   return (
     <>
@@ -22,7 +22,6 @@ const Home: React.FC = () => {
           <ThreeCamera cameraPosition={cameraPosition} setCameraPosition={setCameraPosition} />
           <ThreeLight cameraPosition={cameraPosition} />
           <PlateauTilesetTransform>
-            {/* <PlateauTileset path='bldg/23100_nagoya/23101_chikusa-ku/notexture' /> */}
             <PlateauTileset path='bldg/23100_nagoya/23102_higashi-ku/notexture' center />
           </PlateauTilesetTransform>
           <EffectComposer>
