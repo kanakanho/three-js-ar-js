@@ -11,7 +11,7 @@ import { ThreeCamera } from './_components/ThreeCamera';
 import { ThreeLight } from './_components/ThreeLight';
 
 const Home: React.FC = () => {
-  const [cameraPosition, setCameraPosition] = useState<Vector3>(new Vector3(960, -100, -180));
+  const [cameraPosition, setCameraPosition] = useState<Vector3>(new Vector3(0, 0, -0));
 
   return (
     <>
@@ -20,6 +20,7 @@ const Home: React.FC = () => {
         <XR>
           <fogExp2 attach='fog' color='white' density={0.0002} />
           <ThreeCamera cameraPosition={cameraPosition} setCameraPosition={setCameraPosition} />
+          {/* <OrbitControls target={cameraPosition} /> */}
           <ThreeLight cameraPosition={cameraPosition} />
           <PlateauTilesetTransform>
             {/* <PlateauTileset path='bldg/23100_nagoya/23101_chikusa-ku/notexture' /> */}
