@@ -10,14 +10,14 @@ import { PlateauTileset } from './_components/PlateauTileset';
 import { PlateauTilesetTransform } from './_components/PlateauTilesetTransform';
 
 const Home: React.FC = () => {
-  const [cameraPosition, setCameraPosition] = useState<Vector3>(new Vector3(1050, 500000, -250));
+  const [cameraPosition, setCameraPosition] = useState<Vector3>(new Vector3(1050, 12, -250));
 
   return (
     <>
       <ARButton />
       <Canvas>
         <XR>
-          <PerspectiveCamera makeDefault position={cameraPosition} near={1} far={1e5} />
+          <PerspectiveCamera makeDefault position={cameraPosition} near={1} far={1000} />
           <OrbitControls target={cameraPosition} />
           <directionalLight
             position={[cameraPosition.x, cameraPosition.y + 100, cameraPosition.z]}
