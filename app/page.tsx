@@ -11,7 +11,7 @@ import { ThreeCamera } from './_components/ThreeCamera';
 import { ThreeLight } from './_components/ThreeLight';
 
 const Home: React.FC = () => {
-  const [cameraPosition, setCameraPosition] = useState<Vector3>(new Vector3(960, 12, -180));
+  const [cameraPosition, setCameraPosition] = useState<Vector3>(new Vector3(960, -100, -180));
 
   return (
     <>

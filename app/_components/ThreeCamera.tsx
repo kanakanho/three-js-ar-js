@@ -92,5 +92,5 @@ export const ThreeCamera: React.FC<ThreeCameraProps> = ({ cameraPosition, setCam
     console.log(cameraPosition);
   });
 
-  return <PerspectiveCamera makeDefault position={cameraPosition} near={1} far={1000} />;
+  return <PerspectiveCamera fov={10} makeDefault position={cameraPosition} near={1} far={1000} />;
 };

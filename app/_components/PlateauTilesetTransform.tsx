@@ -24,12 +24,9 @@ export const PlateauTilesetTransform: React.FC<PlateauTilesetTransformProps> = (
 
   const context = useMemo(() => ({ setCenter }), [setCenter]);
 
-  const scale = 2;
-  const scales: Vector3 = new Vector3(scale, scale, scale);
-
   return (
     <PlateauTilesetTransformContext.Provider value={context}>
-      <group position={offset} scale={scales} quaternion={rotation}>
+      <group position={offset} quaternion={rotation}>
         {children}
       </group>
     </PlateauTilesetTransformContext.Provider>
