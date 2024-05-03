@@ -7,11 +7,11 @@ type ThreeLightProps = {
 export const ThreeLight: React.FC<ThreeLightProps> = ({ cameraPosition }) => {
   return (
     <>
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={2} />
       <directionalLight
         name='directionalLight'
         position={[cameraPosition.x, cameraPosition.y+200, cameraPosition.z]}
-        intensity={1}
+        intensity={2}
         castShadow
         shadow-mapSize={[8192, 8192]}
       >
