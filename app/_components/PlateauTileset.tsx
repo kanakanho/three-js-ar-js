@@ -93,5 +93,5 @@ export const PlateauTileset: React.FC<PlateauTilesetProps> = ({ path, center = f
     tiles.update();
   });
 
-  return <primitive object={tiles.group} position={[0, -100, 0]} />;
+  return <primitive object={tiles.group} position={[0, -200, 0]} />;
 };
