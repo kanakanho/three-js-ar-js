@@ -20,7 +20,6 @@ const Home: React.FC = () => {
         <XR>
           <fogExp2 attach='fog' color='white' density={0.0002} />
           <ThreeCamera cameraPosition={cameraPosition} setCameraPosition={setCameraPosition} />
-          {/* <OrbitControls target={cameraPosition} /> */}
           <ThreeLight cameraPosition={cameraPosition} />
           <PlateauTilesetTransform>
             {/* <PlateauTileset path='bldg/23100_nagoya/23101_chikusa-ku/notexture' /> */}
