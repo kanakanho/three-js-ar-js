@@ -5,7 +5,6 @@ import { useFrame, useThree } from '@react-three/fiber';
 import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { Box3, Matrix4, Mesh, MeshStandardMaterial, Vector3 } from 'three';
 import { GLTFLoader } from 'three-stdlib';
-
 import { PlateauTilesetTransformContext } from '../_hooks/PlateauTilesetTransformContext';
 import { PlateauTilesetProps } from '../_types/PlateauTilesetProps';
 import { CesiumRTCPlugin } from '../_utils/CesiumRTCPlugin';

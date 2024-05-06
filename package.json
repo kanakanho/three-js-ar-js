@@ -18,7 +18,7 @@
     "3d-tiles-renderer": "^0.3.13",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@react-three/drei": "^9.17.1",
+    "@react-three/drei": "^9.105.6",
     "@react-three/fiber": "^8.2.0",
     "@react-three/postprocessing": "~2.6.2",
     "@react-three/xr": "^5.7.1",
